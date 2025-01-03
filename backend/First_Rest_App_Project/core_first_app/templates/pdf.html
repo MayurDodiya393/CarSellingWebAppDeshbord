@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        /* General Invoice Box */
+        .invoice-box {
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        /* Table Styles */
+        table {
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: 1px solid #ddd;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Top Row Styling */
+        .top_rw td {
+            border: none;
+            background-color: #f1f1f1;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Heading Row */
+        .heading td {
+            background-color: #ddd;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* Item Row */
+        .item td {
+            background-color: #fafafa;
+            color: #555;
+        }
+
+        /* Total Row */
+        .total {
+            background-color: #e9ecef;
+            font-weight: bold;
+            text-align: right;
+            color: #333;
+        }
+
+        /* Seller and Buyer Details */
+        .invoice-box b {
+            color: #333;
+        }
+
+        /* Shipping Address */
+        .information td {
+            color: #444;
+        }
+
+        /* Declaration Section */
+        .declaration td {
+            color: #444;
+        }
+
+        /* Header and Footer Customization */
+        h2 {
+            color: #007BFF; /* Blue color for the header */
+        }
+
+        .top span {
+            color: #007BFF;
+            font-size: 0.9em;
+        }
+
+        .total b {
+            color: #28a745; /* Green color for total */
+        }
+
+        /* Final Signature */
+        .signature {
+            font-size: 1em;
+            color: #333;
+            font-style: italic;
+        }
+
+    </style>
+    <title>Invoice - {{ order_id }}</title>
+</head>
+
+<body>
+
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top_rw">
+                <td colspan="2">
+                    <h2 
+                    style="padding-top:10px ; padding-left: 5x; margin-bottom: 0;"> Tax invoice/Bill of Supply/Cash memo </h2>
+                    <span> Number: {{ order_number }} Date: {{ current_date }} </span>
+                </td>
+                <td style=" padding-left: 5x;">
+                    PaytmMall Order Id: {{ order_id }}
+                </td>
+            </tr>
+            <tr class="top">
+                <td colspan="3">
+                    <table>
+                        <tr style="padding-top: 5px; padding-left: 5px; ">
+                            <td>
+                                <b>Seller Details:</b><br>
+                                WheelTrade Pvt. Ltd.<br>
+                                123 Main Street, Auto Lane<br>
+                                Mumbai, Maharashtra - 400001<br>
+                                Phone: +91-9876543210<br>
+                                Email: sales@WheelTrade.com<br>
+                                GSTIN: 27ABCDE1234F1ZK<br>
+                            </td>
+                    </table>
+                </td>
+            </tr>
+            <tr class="information">
+                <td colspan="3">
+                    <table style="padding-top: 5px; padding-left: 5px;">
+                        <tr>
+                            <td colspan="2">
+                                <b> Shipping Address: xxxxxxxx, </b> <br>
+                                xxxx, xxxxxxx <br>
+                                +xxxx-xxx-xxx-xxxx<br>
+                                xxx@xxxxx.com<br>
+                                www.xxxxxxxxxxx.com
+                            </td>
+                            <td>
+                                <b>Buyer Details: xxx xxxx,</b><br>
+                                xxx xxx xxxxx<br>
+                                xxxx, xxxxxx - xxxxxx<br>
+                                Phone: +91-xxxxxxxxxx<br>
+                                Email: xxxx.x@xxxx.com
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <table cellspacing="0px" cellpadding="2px">
+                        <tr class="heading">
+                            <td>Car Details</td>
+                            <td></td>
+                        </tr>
+                        <tr class="item">
+                            <td>Make and Model:</td>
+                            <td>{{ car_name }}</td>
+                        </tr>
+                        <tr class="item">
+                            <td>Company Name:</td>
+                            <td>{{ car_company }}</td>
+                        </tr>
+                        <tr class="item">
+                            <td>Registration Year:</td>
+                            <td>{{ manufacture_year }}</td>
+                        </tr>
+                        <tr class="item">
+                            <td>Registration Number:</td>
+                            <td>{{ registration_number }}</td>
+                        </tr>
+                        <tr class="item">
+                            <td>Chassis Number:</td>
+                            <td>{{ chassis_number }}</td>
+                        </tr>
+                        <tr class="item">
+                            <td>Engine Number:</td>
+                            <td>{{ engine_number }}</td>
+                        </tr>
+                        <tr class="heading">
+                            <td>Pricing Details</td>
+                            <td></td>
+                        </tr>
+                        <tr class="item">
+                            <td>Base Price (INR):</td>
+                            <td>{{ base_price }}</td>
+                        </tr>
+                        <tr class="item">
+                            <td>GST (18%):</td>
+                            <td>{{ gst }}</td>
+                        </tr>
+                        <tr class="item last">
+                            <td>On-Road Price (INR):</td>
+                            <td>{{ on_road_price }}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="total">
+                <td colspan="3"  style="padding-top: 5px;"> 
+                    <b>Total Amount in Words :</b> <u><b style="color: green;">{{ on_road_price_in_words }}</b></u>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="3">
+                    <table cellspacing="0px" cellpadding="2px">
+                        <tr>
+                            <td width="50%">
+                                <b> Declaration: </b> <br>
+                                We declare that this invoice shows the actual price of the goods
+                                described above and that all particulars are true and correct. The
+                                goods sold are intended for end user consumption and not for resale.
+                            </td>
+                            <td>
+                                * This is a computer generated invoice and does not
+                                require a physical signature
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50%"></td>
+                            <td class="signature">
+                                <b> Authorized Signature </b>
+                                <br>
+                                <br>
+                                ...................................
+                                <br>
+                                <br>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

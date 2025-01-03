@@ -1,0 +1,33 @@
+{
+  "short_name": "WheelTrade",
+  "name": "WheelTrade - Buy and Sell Cars Easily",
+  "icons": [
+    {
+      "src": "Mlogo.jpg",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/jpg"
+    },
+    {
+      "src": "Mlogo.jpg",
+      "type": "image/jpg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "Mlogo.jpg",
+      "type": "image/jpg",
+      "sizes": "512x512"
+    },
+    {
+      "src": "Mlogo.jpg",
+      "type": "image/jpg",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#007bff",
+  "background_color": "#f8f9fa",
+  "description": "WheelTrade is your ultimate platform to buy and sell cars with ease and reliability."
+}

@@ -1,0 +1,81 @@
+/* Dark Header Styling */
+.professional-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #343a40;
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand link without hover effect */
+.navbar-brand.no-hover {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.navbar-brand.no-hover:hover {
+  color: #ffffff !important;
+}
+
+/* Nav link styling */
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff !important;
+  font-size: 1rem;
+  margin-right: 25px;
+  transition: color 0.3s ease;
+}
+
+/* Active link styling */
+/* Active link styling with custom border length */
+.navbar-nav .nav-item .nav-link.active {
+  color: #ff9800;
+  font-weight: bold;
+  border-bottom: 2px solid #ff9800;
+  display: inline-block; /* Makes the border length customizable */
+  width: fit-content; /* Ensures the border is as long as the content */
+  padding-bottom: 3px; /* Adjust spacing between text and border */
+}
+
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ff9800 !important;
+}
+
+/* Hamburger icon color */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff;
+  border-radius: 2px;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: var(--bs-navbar-toggler-icon-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 85%;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.95rem;
+    margin-right: 15px;
+  }
+
+  .navbar-nav .nav-item .nav-link.active {
+    color: #ff9800;
+    font-weight: bold;
+    border-bottom: 2px solid #ff9800;
+  }
+}

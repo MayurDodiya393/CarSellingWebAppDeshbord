@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Routes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            margin-top: 0;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            /* Make the header sticky */
+            top: 0;
+            /* Threshold for sticking */
+            background-color: #3a3a8c;
+            color: white;
+            width: 100%;
+            z-index: 1000;
+        }
+
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .api-list {
+            padding: 20px;
+        }
+
+        .api-item {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #e8e8fc;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .api-item:hover {
+            background-color: #d3d3fa;
+            transform: scale(1.02);
+        }
+
+        .api-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .api-url {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .api-url a {
+            text-decoration: none;
+            color: #3a3a8c;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #3a3a8c;
+            color: white;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>API Routes - First_Rest_App_Project</h1>
+    </header>
+    <div class="container">
+        <div class="api-list">
+            <!-- API Route Items -->
+            <div class="api-item">
+                <div class="api-name">Register User</div>
+                <div class="api-url"><a href="/api/register/">/api/register/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">Obtain Token</div>
+                <div class="api-url"><a href="/api/token/">/api/token/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">Refresh Token</div>
+                <div class="api-url"><a href="/api/token/refresh/">/api/token/refresh/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">Cars List & Create</div>
+                <div class="api-url"><a href="/api/cars/">/api/cars/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">Car Details, Update & Delete</div>
+                <div class="api-url"><a href="/api/cars/1/">/api/cars/&lt;int:pk&gt;/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">Search Product</div>
+                <div class="api-url"><a href="/api/searchProduct/">/api/searchProduct/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">Send OTP</div>
+                <div class="api-url"><a href="/api/send-otp/">/api/send-otp/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">Verify OTP</div>
+                <div class="api-url"><a href="/api/verify-otp/">/api/verify-otp/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">User Profile</div>
+                <div class="api-url"><a href="/api/user/profile/">/api/user/profile/</a></div>
+            </div>
+            <div class="api-item">
+                <div class="api-name">Generate Invoice</div>
+                <div class="api-url"><a href="/generate_invoice/1/">/generate_invoice/&lt;int:car_id&gt;/</a></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 First_Rest_App_Project - API Routes Guide</p>
+    </footer>
+</body>
+
+</html>

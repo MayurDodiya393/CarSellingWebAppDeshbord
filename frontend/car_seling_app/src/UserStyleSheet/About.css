@@ -1,0 +1,108 @@
+.about-container {
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  
+  .about-details, .about-features, .about-team {
+    margin-bottom: 2.5rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 0.5rem;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .about-footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 1rem;
+    }
+  
+    .about-title {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    ul li {
+      font-size: 1rem;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    ul {
+      padding-left: 1rem;
+    }
+  
+    ul li {
+      font-size: 0.9rem;
+    }
+  
+    .about-description {
+      font-size: 0.9rem;
+    }
+  }
+  

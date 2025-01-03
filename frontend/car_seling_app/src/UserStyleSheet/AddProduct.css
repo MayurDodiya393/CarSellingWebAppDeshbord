@@ -1,0 +1,126 @@
+/* Container Styling */
+.add-product-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #f8fafc; /* Subtle off-white for better theme blending */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e0e0e0; /* Slight border for definition */
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #444; /* Neutral dark gray */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff; /* Accent underline */
+  padding-bottom: 10px;
+}
+
+/* Form Card Styling */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+/* Checkbox Label Styling */
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+/* Button Styling */
+.btn-submit {
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 10px rgba(0, 86, 179, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-product-container {
+      margin: 20px;
+      padding: 20px;
+  }
+
+  .form-control {
+      font-size: 0.9rem;
+  }
+
+  .btn-submit {
+      font-size: 0.9rem;
+  }
+
+  .page-title {
+      font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-product-container {
+      margin: 10px;
+      padding: 15px;
+  }
+
+  .btn-submit {
+      font-size: 0.85rem;
+  }
+
+  .form-control {
+      font-size: 0.85rem;
+      padding: 10px;
+  }
+
+  label {
+      font-size: 0.85rem;
+  }
+}
+
+

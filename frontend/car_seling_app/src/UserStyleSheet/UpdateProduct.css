@@ -1,0 +1,145 @@
+.update-product-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #f8fafc;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e0e0e0;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.lbl-title{
+  padding-left: 6px;
+  margin-bottom: -16px;
+  color: black;
+  font-size: 0.9rem;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+.btn-submit {
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 10px rgba(0, 86, 179, 0.4);
+  transform: translateY(-2px);
+}
+
+.loading-container {
+  text-align: center;
+  margin: 50px;
+  font-size: 1.5rem;
+  color: #333;
+}
+.img-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Matches the width of input fields */
+  margin: 0 auto;
+  gap: 20px;
+}
+.old-car-image {
+  max-width: 100px;
+  height: auto;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+}
+.old-image-container {
+  margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .update-product-container {
+      margin: 20px;
+      padding: 20px;
+  }
+
+  .form-control {
+      font-size: 0.9rem;
+  }
+
+  .btn-submit {
+      font-size: 0.9rem;
+  }
+
+  .img-box {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .update-product-container {
+      margin: 10px;
+      padding: 15px;
+  }
+
+  .btn-submit {
+      font-size: 0.85rem;
+  }
+
+  .form-control {
+      font-size: 0.85rem;
+      padding: 10px;
+  }
+
+  label {
+      font-size: 0.85rem;
+  }
+}
+

@@ -1,0 +1,268 @@
+.product-list-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.product-list-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.table-responsive {
+  margin: 0 auto;
+  max-width: 90%;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+}
+
+.product-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #007bff;
+  color: white;
+  z-index: 10;
+}
+
+.product-table tbody {
+  display: table-caption;
+  height: 400px; /* Set the height of the scrollable area */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.product-table tbody tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.product-table th,
+.product-table td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.product-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.product-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+img.product-image {
+  width: 150px;
+  height: auto;
+  border: 0px solid #fff;
+  border-radius: 5px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Search Input Styles */
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+  font-size: 0.875rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a;
+}
+
+.btn-info {
+  background-color: #17a2b8; /* Info color */
+  border: none;
+  color: #fff;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.btn-info:hover {
+  background-color: #117a8b; /* Darker shade of info color */
+}
+
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #007bff;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-list-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .table-responsive {
+    max-width: 100%;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .product-image {
+    width: 50%;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-list-title {
+    font-size: 1.2rem;
+  }
+
+  .search-input {
+    width: 90%;
+  }
+
+  .product-table th,
+  .product-table td {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .product-image {
+    width: 50%;
+  }
+
+  .btn {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+}
+
+
+/* Pagination Styling */
+/* Pagination Styling */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-link {
+  background-color: rgba(0, 123, 255, 0.3);
+  font-size: 1.1rem;
+  color: #333;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.page-link:hover {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+.page-item.active .page-link {
+  background-color: #0056b3;
+  color: white;
+}
+
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+ul li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .pagination-container {
+    margin-top: 15px;
+  }
+
+  .page-link {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
